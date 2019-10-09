@@ -8,5 +8,4 @@ FROM openjdk:8-alpine
 
 WORKDIR /data
 COPY --from=builder /data/springboot-helloworld/target/*.jar ./app.jar
-EXPOSE 8080
 CMD ["java", "-jar", "app.jar"]
